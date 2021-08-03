@@ -1,1 +1,0 @@
-# bitci-pay-next-project
