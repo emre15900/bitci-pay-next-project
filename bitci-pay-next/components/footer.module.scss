@@ -1,0 +1,103 @@
+/* ===== FOOTER ===== */
+.fw-footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  padding: 65px 0 20px 0;
+  background: #ffffff;
+  border: 1px solid #f4f4f4;
+  .bitci-logo {
+    display: flex;
+    justify-content: flex-start;
+    svg,
+    img {
+      width: 201px;
+      height: 54.1px;
+      margin-bottom: 10.9px;
+    }
+  }
+  .info {
+    font-weight: 300;
+    margin-bottom: 18px;
+    text-align: left;
+    color: #000000a6;
+  }
+  address {
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20.5px;
+    color: #000000a6;
+  }
+  .navT {
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 17px;
+    font-size: 20px;
+  }
+
+  .language {
+    .col-12 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0 0 0;
+      margin: 30px 0 -20px 0;
+      border-top: 1px solid #f4f4f4;
+      .lang {
+        display: flex;
+        img {
+          margin-right: 8px;
+        }
+        .tr {
+          font-size: 16px;
+          color: #000000;
+          margin-right: 8px;
+        }
+        .turkce {
+          font-size: 16px;
+          color: #9b9b9b;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .footer {
+    .info {
+      text-align: center;
+    }
+    address {
+      text-align: center;
+    }
+    .social {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    .footerTop {
+      text-align: center;
+    }
+  }
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+    .navItem {
+        list-style-type: none;
+      .navLink {
+        padding: 0;
+        font-weight: 400;
+        line-height: 35px;
+        font-size: 16px;
+        color: #6a6a6a;
+        text-decoration: none;
+        &:hover {
+          color: rgb(37, 37, 37);
+        }
+      }
+    }
+  }

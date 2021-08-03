@@ -1,0 +1,101 @@
+// Slider
+
+.slider{
+  margin-top: 250px;
+  margin-bottom: 160px;
+  .sliderText{
+      .hood{
+          font-size: 40px;
+          color: #000;
+          font-weight: bold;
+      }
+      .text{
+          font-size: 40px;
+          font-weight: lighter;
+      }
+      .content{
+          font-size: 20px;
+          color: #6A6A6A;
+          margin-bottom: 30px;
+      }
+      .nowBuy{
+          background: #EA5607;
+          color: #FFFFFF;
+          border-radius: 4px;
+          padding: 20px 50px;
+          font-size: 16px;
+          text-decoration: none;
+          outline: 0;
+          border: none;
+          &:hover{
+              background: darken(#EA5607, 3%);
+          }
+      }
+      .whitePaper{
+          padding: 20px 40px;
+          font-size: 16px;
+          border-radius: 4px;
+          color: #3B3B3B;
+          text-decoration: none;
+          margin-left: 5px;
+          font-weight: 450;
+          outline: 0;
+          border: none;
+          background: none;
+          &:hover{
+              background: lighten(#3B3B3B, 40%);
+              color: #FFFFFF;
+          }
+      }
+  }
+  .sliderImage{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .sliderLogo{
+          max-height: 410px;
+          z-index: 10;
+      }
+      .sliderLogoBack{
+          position: relative;
+          .firstBack{
+              position: absolute;
+              top: -249px;
+              left: -454px;
+              max-height: 498px;
+              animation: wink 1s infinite alternate;
+          }
+          .twoBack{
+              position: absolute;
+              top: -287px;
+              left: -491px;
+              max-height: 572px;
+              animation: wink2 1s infinite alternate;
+          }
+          @keyframes wink {
+              0%   {
+                  transform: scale(0.9);
+              }
+              100% {
+                  transform: scale(1);
+              }
+          }
+          @keyframes wink2 {
+              0%   {
+                  transform: scale(0.8);
+              }
+              100% {
+                  transform: scale(1.1);
+              }
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .slider{
+      margin-top: 180px;
+      margin-bottom: 120px;
+  }
+}
