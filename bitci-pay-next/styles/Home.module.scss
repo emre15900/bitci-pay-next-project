@@ -99,3 +99,25 @@
       margin-bottom: 120px;
   }
 }
+
+
+/* ===== STRIP ===== */
+.strip{
+    background: linear-gradient(to right, #EA5607 50%, #FF7600 100%);
+    margin: 100px 0 50px 0;
+    .infoCol{
+        padding: 78px;
+        .stripCol{
+            .title{
+                font-size: 24px;
+                color: #FFFFFF;
+            }
+            .text{
+                margin-top: 15px;
+                font-size: 16px;
+                color: #FFFFFF;
+                font-weight: lighter;
+            }
+        }
+    }
+}

@@ -1,10 +1,13 @@
+import React from "react";
 import cn from "classnames";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.scss";
 
-export default function Home() {
+const Home = (props) => {
+  const [showResults, setShowResults] = React.useState(false);
+  const onClick = () => setShowResults(true);
   return (
     <Layout className={styles.container}>
       <Head>
@@ -25,6 +28,11 @@ export default function Home() {
                 <p className={styles.content}>
                   Bitci Chain’in kendine has coini olan BITCI’nin birçok
                   kullanım alanı mevcuttur.
+                  <div id="results" className="search-results">
+                    Some Results
+                  </div>
+                  <input type="submit" value="Search" onClick={onClick} />
+                  {showResults ? "test" : null}
                 </p>
                 <button className={styles.nowBuy}>Şimdi Satın Al</button>
                 <button className={styles.whitePaper}>Whitepaper</button>
@@ -40,15 +48,15 @@ export default function Home() {
                 <div className={styles.sliderLogoBack}>
                   <img
                     src="/image/signal-1.svg"
-                    width='500px'
-                    height='500px'
+                    width="500px"
+                    height="500px"
                     className={(cn("d-none d-md-block"), styles.firstBack)}
                     alt=""
                   />
                   <img
                     src="/image/signal-2.svg"
-                    width='572px'
-                    height='572px'
+                    width="572px"
+                    height="572px"
                     className={(cn("d-none d-md-block"), styles.twoBack)}
                     alt=""
                   />
@@ -57,7 +65,44 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.strip}>
+          <div className={cn("container-fluid")}>
+            <div className={cn("container", styles.infoCol)}>
+              <div className={cn("row")}>
+                <div className={cn("col-12 col-lg-4", styles.stripCol)}>
+                  <span className={styles.title}>
+                    BITCI <strong>Satın Al</strong>
+                  </span>
+                  <p className={styles.text}>
+                    Bitcicoin satın alabileceğiniz güvenli ve güvenilir kanallar
+                    mevcuttur.
+                  </p>
+                </div>
+                <div className={cn("col-12 col-lg-4", styles.stripCol)}>
+                  <span className={styles.title}>
+                    BITCI <strong>Sakla</strong>
+                  </span>
+                  <p className={styles.text}>
+                    Bitcicoin’lerinizi güvenli cüzdanlarda saklayın.
+                  </p>
+                </div>
+                <div className={cn("col-12 col-lg-4", styles.stripCol)}>
+                  <span className={styles.title}>
+                    BITCI <strong>Kullan</strong>
+                  </span>
+                  <p className={styles.text}>
+                    Bitcicoin’lerinizle çok yakında birçok alışveriş kanalından
+                    faydalanabileceksiniz.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </Layout>
   );
-}
+};
+
+export default Home;
