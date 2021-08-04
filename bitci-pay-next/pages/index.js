@@ -1,13 +1,10 @@
-import React from "react";
 import cn from "classnames";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.scss";
 
-const Home = (props) => {
-  const [showResults, setShowResults] = React.useState(false);
-  const onClick = () => setShowResults(true);
+export default function Home() {
   return (
     <Layout className={styles.container}>
       <Head>
@@ -28,11 +25,6 @@ const Home = (props) => {
                 <p className={styles.content}>
                   Bitci Chain’in kendine has coini olan BITCI’nin birçok
                   kullanım alanı mevcuttur.
-                  <div id="results" className="search-results">
-                    Some Results
-                  </div>
-                  <input type="submit" value="Search" onClick={onClick} />
-                  {showResults ? "test" : null}
                 </p>
                 <button className={styles.nowBuy}>Şimdi Satın Al</button>
                 <button className={styles.whitePaper}>Whitepaper</button>
@@ -100,9 +92,8 @@ const Home = (props) => {
             </div>
           </div>
         </section>
+
       </main>
     </Layout>
   );
-};
-
-export default Home;
+}
