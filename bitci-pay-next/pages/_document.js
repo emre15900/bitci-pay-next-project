@@ -1,31 +1,22 @@
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet();
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
   render() {
     return (
-      <html lang="tr">
-        <Head>{this.props.styleTags}
-          <link
-            href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
-            rel="stylesheet"
-          />
-         <script src="../static/js/jquery.main.js" async/>
-        </Head>
+      <Html>
+        <Head />
         <body>
           <Main />
-          <div id="modal" />
           <NextScript />
         </body>
-      </html>
-    );
+      </Html>
+    )
   }
 }
+
+export default MyDocument
