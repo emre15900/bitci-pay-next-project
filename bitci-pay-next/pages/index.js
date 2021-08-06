@@ -64,7 +64,7 @@ export default function Home() {
               <div className={cn("row")}>
                 <div className={cn("col-12 col-lg-4", styles.stripCol)}>
                   <span className={styles.title}>
-                    BITCI <strong>Satın Al</strong>
+                    BITCI<strong> Satın Al</strong>
                   </span>
                   <p className={styles.text}>
                     Bitcicoin satın alabileceğiniz güvenli ve güvenilir kanallar
